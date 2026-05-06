@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii To-Do List ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>✨ Kawaii Task-Kun ✨</h1>
+            <p>Ayo selesaikan tugasmu hari ini dengan senyuman! 🌸</p>
+        </header>
+
+        <div class="main-layout">
+            <section class="form-section">
+                <h2>Tambah Tugas Baru 📝</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Judul Tugas</label>
+                        <input type="text" id="task-title" placeholder="Misal: Bikin desain web 🎨" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-desc">Catatan / Deskripsi</label>
+                        <textarea id="task-desc" rows="3" placeholder="Detail tugas di sini..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="task-category">Kategori</label>
+                            <select id="task-category">
+                                <option value="Pekerjaan">💻 Pekerjaan</option>
+                                <option value="Pribadi">🌸 Pribadi</option>
+                                <option value="Belajar">📚 Belajar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="task-priority">Prioritas</label>
+                            <select id="task-priority">
+                                <option value="Low">🟢 Rendah</option>
+                                <option value="Medium">🟡 Sedang</option>
+                                <option value="High">🔴 Tinggi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-date">Tenggat Waktu</label>
+                        <input type="date" id="task-date" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Simpan Tugas 💖</button>
+                </form>
+            </section>
+
+            <section class="list-section">
+                <div class="progress-box">
+                    <div class="progress-info">
+                        <span>Progress Tugasmu: <span id="progress-percentage">0%</span></span>
+                        <span id="encouragement-note" class="note-text">Belum ada tugas yang selesai, semangat! 💪✨</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+
+                <div class="control-panel">
+                    <input type="text" id="search-input" placeholder="Cari tugasmu... 🔍">
+                    <select id="filter-status">
+                        <option value="all">Semua Tugas</option>
+                        <option value="active">Belum Selesai ⏳</option>
+                        <option value="completed">Selesai 🎉</option>
+                    </select>
+                </div>
+
+                <div id="task-list" class="task-grid">
+                    </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
